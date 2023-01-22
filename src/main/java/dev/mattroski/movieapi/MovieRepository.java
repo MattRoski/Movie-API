@@ -8,3 +8,6 @@ import org.springframework.stereotype.Repository;
 public interface MovieRepository extends MongoRepository<Movie, ObjectId> {
 
 }
+
+//the repository layer is kind the data access layer for our API
+//it does the job of actually talking to the database and getting the data back
