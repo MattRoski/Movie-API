@@ -16,10 +16,13 @@ public class MovieApiApplication {
 
 }
 
+
 //annotations in java are used to let the compiler know what this class does
 //tomcat is the web server for the app, port 8080
 //whitelabel error page, app working but no endpoint to hit
 //Will divide that app in separate layers: Service layer, Data Access Layer, API Layer
+
+//collections are like tables for Relation DBs
 
 //IDE could not resolve @RestController, until I wrote @GetMapping("")
   //import org.springframework.web.bind.annotation.RestController;
