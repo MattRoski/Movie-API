@@ -22,10 +22,10 @@ public class MovieController {
         return new ResponseEntity<List<Movie>>(movieService.allMovies(), HttpStatus.OK);
         //return new ResponseEntity<String>("All MOOOOVIES",HttpStatus.OK);
     }
-    @GetMapping("/{id}") //need Optional as may return null instead of Movie Object
-    public ResponseEntity<Optional<Movie>> getSingleMovie(@PathVariable ObjectId id){ //what ever we are getting through /{id}, we want to convert it to ObjectId
+    @GetMapping("/{imdbId}") //need Optional as may return null instead of Movie Object
+    public ResponseEntity<Optional<Movie>> getSingleMovie(@PathVariable String imdbId){ //what ever we are getting through /{id}, we want to convert it to ObjectId
         //need to go to service layer and write a new method
-        return new ResponseEntity<Optional<Movie>>(movieService.singleMovie(id), HttpStatus.OK);
+        return new ResponseEntity<Optional<Movie>>(movieService.singleMovie(imdbId), HttpStatus.OK);
     }
 }
 //in REST APIs there are usually multiple layers, one of the layers is the API layer, which is this controller and will only concern itself about the task of getting a request

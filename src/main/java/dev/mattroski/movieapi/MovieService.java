@@ -16,8 +16,8 @@ public class MovieService {
         return movieRepository.findAll();//findAll() comes from the MongoRepository class
     }
 
-    public Optional<Movie> singleMovie(ObjectId id){ //Need to have Optional<Movie> as the method may return null instead of a movie object
-        return movieRepository.findById(id);
+    public Optional<Movie> singleMovie(String imdbId){ //Need to have Optional<Movie> as the method may return null instead of a movie object
+        return movieRepository.findMovieByImdbId(imdbId);
     }
 }
 //the service class MovieService will house most of the business logic.
